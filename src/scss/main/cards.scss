@@ -1,0 +1,233 @@
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 33px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style-type: none;
+}
+
+.options-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-width: 372px;
+  background: transparent;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 24px 40px rgba(0, 0, 0, 0.20)) drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.20));
+  transition: $transition-config;
+  padding: 20px 20px 50px;
+  justify-content: space-between;
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(74, 193, 142, 0.30);
+    clip-path: polygon(0 34.00px,34.00px 0,100% 0,100% calc(100% - 34.00px),calc(100% - 34.00px) 100%,0 100%,0 34.00px,1px  calc(34.00px + 0.41px),1px calc(100% - 1px),calc(100% - 34.00px - 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 34.00px - 0.41px),calc(100% - 1px) 1px,calc(34.00px + 0.41px) 1px,1px calc(34.00px + 0.41px));
+    transition: $transition-config;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: url("../../../img/card-bg-2.png") no-repeat;
+    background-size: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    filter: drop-shadow(0px 0px 24px rgba(74, 193, 142, 0.25));
+    &:after {
+      background: #4AC18E;
+    }
+
+    .options-item__image {
+      opacity: 1;
+    }
+
+    .options-item__title-wrapper-icon {
+      filter: drop-shadow(0px 0px 4px rgba(74, 193, 142, 0.70)) drop-shadow(0px 0px 8px rgba(74, 193, 142, 0.70));
+      path {
+        opacity: 1;
+      }
+      g {
+        path {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.5;
+    transition: $transition-config;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 83px;
+    margin-left: 9px;
+  }
+
+  &__title-wrapper-icon {
+    width: 80px;
+    transition: $transition-config;
+
+    path {
+      transition: $transition-config;
+    }
+
+    g {
+      path {
+        transition: $transition-config;
+      }
+    }
+  }
+
+  &__title-wrapper-item {
+    font-family: $inter;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 200px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: $inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #CFD0D3;
+    margin: 15px 0 0 12px;
+    max-width: 305px;
+    padding: 0 5px;
+  }
+
+  &__type {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 17px;
+    gap: 8px;
+    box-sizing: border-box;
+    padding-right: 15px;
+  }
+
+  &__type-status {
+    color: #CFD0D3;
+    font-family: $inter;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  &__type-line {
+    width: 100%;
+    background: #4AC18E;
+    opacity: 0.3;
+    height: 1px;
+    display: block;
+  }
+
+  &__type-title {
+    font-family: $inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.176px;
+    color: #F9F9F9;
+    display: flex;
+    margin-top: 3px;
+    margin-left: 17px;
+  }
+}
+
+.options-item-buttons {
+  margin-top: 25px;
+  margin-left: 17px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background: #4AC18E;
+    opacity: 0.3;
+    left: 0;
+    bottom: 25px;
+    right: 10px;
+    height: 1px;
+  }
+
+  &__continue {
+    font-family: $inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    color: #F9F9F9;
+    background: transparent;
+    border: 1px solid #4AC18E;
+    border-radius: 4px;
+    padding: 13px 20px;
+    cursor: pointer;
+    transition: $transition-config;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #4AC18E;
+      color: #292C3D;
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px rgb(74 193 142 / 50%);
+    }
+  }
+
+  &__compare {
+    font-family: $inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #4AC18E;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #4AC18E;
+      transition: $transition-config;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
