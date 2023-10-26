@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .options {
   display: flex;
   flex-direction: row;
@@ -203,31 +205,6 @@
   }
 
   &__compare {
-    font-family: $inter;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #4AC18E;
-    text-decoration: none;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: #4AC18E;
-      transition: $transition-config;
-      transform-origin: left;
-      transform: scaleX(0);
-    }
-    
-    &:hover {
-      &::after {
-        transform: scaleX(1);
-      }
-    }
+    @include site-link;
   }
 }

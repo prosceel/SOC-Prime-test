@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 11px;
+  padding-bottom: 35px;
+}
+
+.footer-navigation {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+  
+  &__item {
+    position: relative;
+    
+    &::after {
+      position: absolute;
+      content: "";
+      right: -17px;
+      top: -6px;
+      bottom: -6px;
+      width: 1px;
+      background: #4AC18E;
+      opacity: 0.3;
+    }
+
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__item-link {
+    @include site-link;
+  }
+}
