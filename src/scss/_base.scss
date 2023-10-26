@@ -1,0 +1,32 @@
+html {
+  --wrapper-width: #{$wrapper-width};
+  --wrapper-padding: #{$wrapper-padding};
+
+  height: 100%;
+
+  @media (max-width: 1023px) {
+    --wrapper-padding: #{$wrapper-padding-mobile};
+  }
+}
+
+.wrapper {
+  max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+}
+
+.page-wrapper {
+  background: #1F202E;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

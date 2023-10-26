@@ -30,7 +30,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
-    transition: 300ms ease-in-out all;
+    transition: $transition-config;
     box-sizing: border-box;
     border: 1px solid #EE9D23;
     outline: none;
