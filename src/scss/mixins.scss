@@ -26,3 +26,30 @@
     }
   }
 }
+
+@mixin main-button {
+  font-family: $inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  color: #F9F9F9;
+  background: transparent;
+  border: 1px solid #4AC18E;
+  border-radius: 4px;
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: $transition-config;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #4AC18E;
+    color: #292C3D;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 3px rgb(74 193 142 / 50%);
+  }
+}

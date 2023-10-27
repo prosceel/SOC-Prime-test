@@ -17,6 +17,14 @@ body {
   background: #292C3D;
 }
 
+.modal--is-opened {
+  overflow: hidden;
+
+  body {
+    height: calc(100 * var(--height-point));
+  }
+}
+
 .wrapper {
   max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
   margin: 0 auto;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class='modal--is-opened'>
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -181,6 +181,25 @@
 		</ul>
 	</footer>
 	<img src='img/bg.png' alt='' class='page-wrapper__image'>
+	<div class='modal-overlay'></div>
+	<div class='modal'>
+		<button class='modal__close-button'>
+			<span class='modal__close-button-arrows'></span>
+		</button>
+		<h2 class='modal__title'>Get Started</h2>
+		<span class='modal__description'>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+			dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</span>
+		<ul class='modal-buttons'>
+			<li class='modal-buttons__item'>
+				<button class='modal-buttons__item-continue-button'>GET Started</button>
+			</li>
+			<li class='modal-buttons__item'>
+				<button class='modal-buttons__item-cancel-button'>Cancel</button>
+			</li>
+		</ul>
+	</div>
 </div>
 </body>
 <script type="text/javascript" src="/dist/index.js" defer></script>
