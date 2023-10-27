@@ -14,5 +14,11 @@
     line-height: 1.33;
     color: #F9F9F9;
     margin-top: 30px;
+
+    @media (max-width: 767px) {
+      margin: 0;
+      font-size: 22px;
+      text-align: center;
+    }
   }
 }

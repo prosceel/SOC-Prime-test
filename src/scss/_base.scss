@@ -4,7 +4,7 @@ html {
 
   height: 100%;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1239px) {
     --wrapper-padding: #{$wrapper-padding-mobile};
   }
 }
@@ -21,7 +21,12 @@ html {
 .page-wrapper {
   background: #1F202E;
   position: relative;
-  min-height: calc(100dvh - 56px);
+  min-height: 580px;
+  overflow-y: scroll;
+  height: calc(100dvh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__image {
     position: absolute;
