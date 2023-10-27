@@ -7,6 +7,10 @@ html {
   @media (max-width: 1239px) {
     --wrapper-padding: #{$wrapper-padding-mobile};
   }
+
+  @media (min-width: #{1180px + ($wrapper-padding * 2)}) {
+    --wrapper-width: #{$wrapper-width-wide};
+  }
 }
 
 body {
@@ -24,8 +28,7 @@ body {
 
 .page-wrapper {
   background: #1F202E;
-  position: relative;
-  min-height: 580px;
+  min-height: 590px;
   overflow-y: scroll;
   height: calc(100 * var(--height-point) - 56px);
   display: grid;
@@ -33,13 +36,14 @@ body {
 
   &__image {
     position: absolute;
-    top: 0;
+    top: 56px;
     bottom: 0;
     left: 0;
     right: 0;
     object-fit: cover;
     width: 100vw;
     max-width: 100%;
-    max-height: 100%;
+    height: 100vh;
+    max-height: calc(100 * var(--height-point) - 56px);;
   }
 }
