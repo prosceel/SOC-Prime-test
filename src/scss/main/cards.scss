@@ -147,7 +147,7 @@
     padding: 0 5px;
 
     @media (max-width: 767px) {
-      max-height: 100px;
+      max-height: 110px;
       overflow: scroll;
     }
   }
@@ -203,6 +203,10 @@
   display: flex;
   align-items: center;
   gap: 25px;
+
+  @media (max-width: 767px) {
+    margin-top: 15px;
+  }
 
   &::after {
     position: absolute;
