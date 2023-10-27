@@ -145,9 +145,11 @@
     margin: 15px 0 0 12px;
     max-width: 305px;
     padding: 0 5px;
+    position: relative;
+    z-index: 2;
 
     @media (max-width: 767px) {
-      max-height: 110px;
+      max-height: 100px;
       overflow: scroll;
     }
   }
