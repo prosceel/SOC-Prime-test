@@ -23,9 +23,8 @@ html {
   position: relative;
   min-height: 580px;
   overflow-y: scroll;
-  height: calc(100dvh - 56px);
-  display: flex;
-  flex-direction: column;
+  height: calc(100 * var(--height-point) - 56px);
+  display: grid;
   justify-content: center;
 
   &__image {
