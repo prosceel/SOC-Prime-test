@@ -20,9 +20,18 @@ export const closeModal = () => {
   }
 }
 
+export const removeActiveClass = () => {
+  ;[].slice.call(document.querySelectorAll('.options-item')).forEach(node => {
+    node.classList.remove('options-item--is-active')
+  })
+}
+
 export default () => {
   ;[].slice.call(document.querySelectorAll('.options-item-buttons__continue')).forEach(node => {
-    node.addEventListener('click', openModal)
+    node.addEventListener('click', (e) => {
+      openModal()
+      e.target.closest('.options-item').classList.add('options-item--is-active')
+    })
   })
 
   ;[
@@ -37,6 +46,7 @@ export default () => {
           text: 'Click On Close Button From Modal'
         })
         closeModal()
+        removeActiveClass()
       })
     } catch (e) {
       console.error(e)
@@ -50,6 +60,7 @@ export default () => {
         text: 'Click On Get Started Button From Modal'
       })
       closeModal()
+      removeActiveClass()
     })
   } catch (e) {
     console.error(e)
