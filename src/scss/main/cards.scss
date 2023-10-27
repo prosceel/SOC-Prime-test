@@ -16,9 +16,10 @@
   }
 
   @media (max-width: 767px) {
-    margin-top: 35px;
+    margin-top: 15px;
     grid-template-columns: repeat(3, calc(100vw - (var(--wrapper-padding) * 2)));
     max-width: calc(100vw - (var(--wrapper-padding) * 2));
+    flex-grow: 1;
   }
 }
 
@@ -95,7 +96,7 @@
     opacity: 0.5;
     transition: $transition-config;
     object-fit: contain;
-    max-width: 100%;
+    width: 100%;
   }
 
   &__title-wrapper {
@@ -146,7 +147,7 @@
     padding: 0 5px;
 
     @media (max-width: 767px) {
-      max-height: 150px;
+      max-height: 100px;
       overflow: scroll;
     }
   }

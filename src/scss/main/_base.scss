@@ -7,6 +7,10 @@
   position: relative;
   z-index: 1;
 
+  @media (max-width: 767px) {
+    flex-grow: 1;
+  }
+
   &__title {
     font-family: $inter;
     font-size: 24px;
