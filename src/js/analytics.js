@@ -1,3 +1,9 @@
+import axios from 'axios';
+
 export const sendEvent = async (data) => {
-  console.log(data)
+  try {
+    await axios.post('https://analytics.dev/event', data)
+  } catch (e) {
+    console.error(e)
+  }
 }

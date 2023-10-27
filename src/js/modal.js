@@ -30,20 +30,28 @@ export default () => {
     document.querySelector('.modal-buttons__item-cancel-button'),
     document.querySelector('.modal-overlay')
   ].forEach(node => {
-    node.addEventListener('click', () => {
+    try {
+      node.addEventListener('click', () => {
+        sendEvent({
+          event: 'click',
+          text: 'Click On Close Button From Modal'
+        })
+        closeModal()
+      })
+    } catch (e) {
+      console.error(e)
+    }
+  })
+
+  try {
+    document.querySelector('.modal-buttons__item-continue-button').addEventListener('click', () => {
       sendEvent({
         event: 'click',
-        text: 'Click On Close Button From Modal'
+        text: 'Click On Get Started Button From Modal'
       })
       closeModal()
     })
-  })
-
-  document.querySelector('.modal-buttons__item-continue-button').addEventListener('click', () => {
-    sendEvent({
-      event: 'click',
-      text: 'Click On Get Started Button From Modal'
-    })
-    closeModal()
-  })
+  } catch (e) {
+    console.error(e)
+  }
 }
