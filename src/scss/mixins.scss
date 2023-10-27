@@ -53,3 +53,29 @@
     box-shadow: 0 0 0 3px rgb(74 193 142 / 50%);
   }
 }
+
+@mixin secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  color: #292C3D;
+  background: #4AC18E;
+  border: 1px solid #4AC18E;
+  border-radius: 4px;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: $transition-config;
+  outline: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #84D1A8;
+    box-shadow: 0 0 4px 0 #84D1A8;
+  }
+}
