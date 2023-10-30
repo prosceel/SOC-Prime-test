@@ -8,14 +8,15 @@
   padding: 0;
   margin: 20px 0 0;
   list-style-type: none;
+  width: calc(100vw - (var(--wrapper-padding) * 2));
 
   @media (max-width: 1239px) {
     gap: 20px;
-    overflow: scroll;
-    scroll-snap-type: x mandatory;
   }
 
   @media (max-width: 767px) {
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
     margin-top: 15px;
     grid-template-columns: repeat(3, calc(100vw - (var(--wrapper-padding) * 2)));
     max-width: calc(100vw - (var(--wrapper-padding) * 2));

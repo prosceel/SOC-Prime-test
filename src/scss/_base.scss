@@ -8,7 +8,7 @@ html {
     --wrapper-padding: #{$wrapper-padding-mobile};
   }
 
-  @media (min-width: #{1180px + ($wrapper-padding * 2)}) {
+  @media (min-width: #{1440px + ($wrapper-padding * 2)}) {
     --wrapper-width: #{$wrapper-width-wide};
   }
 }

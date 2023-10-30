@@ -4,7 +4,9 @@
   justify-content: space-between;
   padding: 12px;
   background: #292C3D;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 
   &::after {
     position: absolute;
